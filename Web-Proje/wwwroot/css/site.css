@@ -82,3 +82,18 @@ body {
     float: right;
     margin: 20px;
 }
+
+.book-picture {
+    width: 100%;
+
+}
+
+.centered {
+    font-size: 20px;
+    font-family: Courier New, Courier, monospace;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

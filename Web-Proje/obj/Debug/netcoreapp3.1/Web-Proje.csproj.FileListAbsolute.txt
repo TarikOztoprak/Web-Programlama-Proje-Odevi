@@ -92,3 +92,4 @@ C:\Users\tarik\source\repos\Web-Proje\Web-Proje\obj\Debug\netcoreapp3.1\staticwe
 C:\Users\tarik\source\repos\Web-Proje\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.dll
 C:\Users\tarik\source\repos\Web-Proje\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.pdb
 C:\Users\tarik\source\repos\Web-Proje\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.genruntimeconfig.cache
+C:\Users\tarik\source\repos\Web-Proje\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Books.cshtml.g.cs
