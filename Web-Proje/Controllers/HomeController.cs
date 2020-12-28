@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Web_Proje.Models;
@@ -29,6 +30,12 @@ namespace Web_Proje.Controllers
         }
 
         public IActionResult Books()
+        {
+            return View();
+        }
+
+        [Authorize(Roles ="admin")]
+        public IActionResult Admin()
         {
             return View();
         }
