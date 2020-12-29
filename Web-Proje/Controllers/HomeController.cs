@@ -34,11 +34,7 @@ namespace Web_Proje.Controllers
             return View();
         }
 
-        [Authorize(Roles ="admin")]
-        public IActionResult Admin()
-        {
-            return View();
-        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
