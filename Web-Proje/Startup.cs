@@ -12,6 +12,7 @@ using Web_Proje.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Web_Proje.Models;
 
 namespace Web_Proje
 {
@@ -27,6 +28,7 @@ namespace Web_Proje
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = false;
@@ -36,6 +38,8 @@ namespace Web_Proje
                 options.Password.RequiredLength = 3;
                 options.Password.RequiredUniqueChars = 0;
             });
+            services.AddDbContext<Context>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -43,10 +47,11 @@ namespace Web_Proje
                 .AddDefaultTokenProviders()
                 .AddDefaultUI()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

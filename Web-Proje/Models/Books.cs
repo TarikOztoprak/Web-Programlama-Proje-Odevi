@@ -16,5 +16,6 @@ namespace Web_Proje.Models
         public int sayfaSayisi { get; set; }
         public string konu { get; set; }
         public string link { get; set; }
+        public string kategori { get; set; }
     }
 }

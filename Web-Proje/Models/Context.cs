@@ -8,9 +8,9 @@ namespace Web_Proje.Models
 {
     public class Context : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public Context(DbContextOptions<Context> options)
+          : base(options)
         {
-            optionsBuilder.UseSqlServer("server=(localdb)\\MSSQLLocalDB; database=books; integrated security = true");
         }
         public DbSet<Books> books { get; set; }
  

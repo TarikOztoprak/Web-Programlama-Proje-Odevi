@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Web_Proje.Models;
 
@@ -12,16 +13,19 @@ namespace Web_Proje.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly Context _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, Context context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await _context.books.ToListAsync());
         }
 
         public IActionResult Privacy()
@@ -29,12 +33,18 @@ namespace Web_Proje.Controllers
             return View();
         }
 
-        public IActionResult Books()
+        public async Task<IActionResult> Books()
         {
-            return View();
+          
+            return View(await _context.books.ToListAsync());
         }
 
-        
+        public async Task<IActionResult> Book(int id)
+        {
+            ViewBag.id = id;
+            return View(await _context.books.ToListAsync());
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

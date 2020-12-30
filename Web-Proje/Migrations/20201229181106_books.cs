@@ -16,7 +16,9 @@ namespace Web_Proje.Migrations
                     basimYili = table.Column<int>(nullable: false),
                     yazar = table.Column<string>(nullable: true),
                     sayfaSayisi = table.Column<int>(nullable: false),
-                    konu = table.Column<string>(nullable: true)
+                    konu = table.Column<string>(nullable: true),
+                    link = table.Column<string>(nullable: true),
+                    kategori = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -9,7 +9,7 @@ using Web_Proje.Models;
 namespace Web_Proje.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20201228223809_books")]
+    [Migration("20201229181106_books")]
     partial class books
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,10 +30,16 @@ namespace Web_Proje.Migrations
                     b.Property<int>("basimYili")
                         .HasColumnType("int");
 
+                    b.Property<string>("kategori")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("kitapAdi")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("konu")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("link")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("sayfaSayisi")

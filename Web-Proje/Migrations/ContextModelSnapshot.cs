@@ -28,10 +28,16 @@ namespace Web_Proje.Migrations
                     b.Property<int>("basimYili")
                         .HasColumnType("int");
 
+                    b.Property<string>("kategori")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("kitapAdi")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("konu")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("link")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("sayfaSayisi")
