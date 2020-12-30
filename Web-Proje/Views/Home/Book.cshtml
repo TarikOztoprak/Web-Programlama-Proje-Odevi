@@ -15,14 +15,12 @@
             <div class="row">
                 <div class="col-sm-6">
                     <img style="width: 100%;" src="@Html.DisplayFor(modelItem => item.link)" alt="Card image cap">
-                    <br />
-                    <p>İlk Basım Tarihi: @Html.DisplayFor(modelItem => item.basimYili)</p>
-                    <br />
-                    <p>Sayfa Sayısı: @Html.DisplayFor(modelItem => item.sayfaSayisi)</p>
                 </div>
 
                 <div class="col-sm-6">
-                    <p>@Html.DisplayFor(modelItem => item.konu)</p>
+                    <p style="text-align:justify">@Html.DisplayFor(modelItem => item.konu)</p>
+                    <p>İlk Basım Tarihi: @Html.DisplayFor(modelItem => item.basimYili)</p>
+                    <p>Sayfa Sayısı: @Html.DisplayFor(modelItem => item.sayfaSayisi)</p>
                 </div>
             </div>
          }
