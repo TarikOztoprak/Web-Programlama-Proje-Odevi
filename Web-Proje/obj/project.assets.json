@@ -9194,11 +9194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tarik\\OneDrive\\Masaüstü\\Web-Programlama-Proje-Odevi\\Web-Proje\\Web-Proje.csproj",
+      "projectUniqueName": "C:\\Users\\tarik\\OneDrive\\Masaüstü\\Web-Programlama-Proje-Odevi-main\\Web-Proje\\Web-Proje.csproj",
       "projectName": "Web-Proje",
-      "projectPath": "C:\\Users\\tarik\\OneDrive\\Masaüstü\\Web-Programlama-Proje-Odevi\\Web-Proje\\Web-Proje.csproj",
+      "projectPath": "C:\\Users\\tarik\\OneDrive\\Masaüstü\\Web-Programlama-Proje-Odevi-main\\Web-Proje\\Web-Proje.csproj",
       "packagesPath": "C:\\Users\\tarik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tarik\\OneDrive\\Masaüstü\\Web-Programlama-Proje-Odevi\\Web-Proje\\obj\\",
+      "outputPath": "C:\\Users\\tarik\\OneDrive\\Masaüstü\\Web-Programlama-Proje-Odevi-main\\Web-Proje\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

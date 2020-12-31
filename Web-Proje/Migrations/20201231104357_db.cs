@@ -2,7 +2,7 @@
 
 namespace Web_Proje.Migrations
 {
-    public partial class books : Migration
+    public partial class db : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,12 +24,30 @@ namespace Web_Proje.Migrations
                 {
                     table.PrimaryKey("PK_books", x => x.kitapID);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "messages",
+                columns: table => new
+                {
+                    messageID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    message = table.Column<string>(nullable: true),
+                    BookId = table.Column<int>(nullable: false),
+                    User = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_messages", x => x.messageID);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "books");
+
+            migrationBuilder.DropTable(
+                name: "messages");
         }
     }
 }

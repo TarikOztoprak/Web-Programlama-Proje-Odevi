@@ -362,11 +362,6 @@ C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\bi
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.csproj.CoreCompileInputs.cache
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Books\Create.cshtml.g.cs
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Books\Delete.cshtml.g.cs
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Books\Details.cshtml.g.cs
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Books\Edit.cshtml.g.cs
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Books\Index.cshtml.g.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Book.cshtml.g.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi\Web-Proje\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi\Web-Proje\bin\Debug\netcoreapp3.1\appsettings.json
@@ -566,3 +561,13 @@ C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi\Web-Proje\obj\Deb
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Details.cshtml.g.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Create.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Delete.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Details.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Edit.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Create.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Delete.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Details.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Edit.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Index.cshtml.g.cs

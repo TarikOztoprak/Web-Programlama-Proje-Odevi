@@ -50,6 +50,27 @@ namespace Web_Proje.Migrations
 
                     b.ToTable("books");
                 });
+
+            modelBuilder.Entity("Web_Proje.Models.Messages", b =>
+                {
+                    b.Property<int>("messageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("User")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("messageID");
+
+                    b.ToTable("messages");
+                });
 #pragma warning restore 612, 618
         }
     }

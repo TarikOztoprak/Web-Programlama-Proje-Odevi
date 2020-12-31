@@ -2,31 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Web_Proje.Data;
 using Web_Proje.Models;
 
 namespace Web_Proje.Controllers
 {
-    [Authorize(Roles ="admin")]
-    public class BooksController : Controller
+    public class MessagesController : Controller
     {
-        private readonly Context _context;
+        private readonly ApplicationDbContext _context;
 
-        public BooksController(Context context)
+        public MessagesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Books
+        // GET: Messages
         public async Task<IActionResult> Index()
         {
-            return View(await _context.books.ToListAsync());
+            return View(await _context.Messages.ToListAsync());
         }
 
-        // GET: Books/Details/5
+        // GET: Messages/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,39 +33,39 @@ namespace Web_Proje.Controllers
                 return NotFound();
             }
 
-            var books = await _context.books
-                .FirstOrDefaultAsync(m => m.kitapID == id);
-            if (books == null)
+            var messages = await _context.Messages
+                .FirstOrDefaultAsync(m => m.messageID == id);
+            if (messages == null)
             {
                 return NotFound();
             }
 
-            return View(books);
+            return View(messages);
         }
 
-        // GET: Books/Create
+        // GET: Messages/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Books/Create
+        // POST: Messages/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("kitapID,kitapAdi,basimYili,yazar,sayfaSayisi,konu,link,kategori")] Books books)
+        public async Task<IActionResult> Create([Bind("messageID,message,BookId,User")] Messages messages)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(books);
+                _context.Add(messages);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(books);
+            return View(messages);
         }
 
-        // GET: Books/Edit/5
+        // GET: Messages/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -74,22 +73,22 @@ namespace Web_Proje.Controllers
                 return NotFound();
             }
 
-            var books = await _context.books.FindAsync(id);
-            if (books == null)
+            var messages = await _context.Messages.FindAsync(id);
+            if (messages == null)
             {
                 return NotFound();
             }
-            return View(books);
+            return View(messages);
         }
 
-        // POST: Books/Edit/5
+        // POST: Messages/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("kitapID,kitapAdi,basimYili,yazar,sayfaSayisi,konu,link,kategori")] Books books)
+        public async Task<IActionResult> Edit(int id, [Bind("messageID,message,BookId,User")] Messages messages)
         {
-            if (id != books.kitapID)
+            if (id != messages.messageID)
             {
                 return NotFound();
             }
@@ -98,12 +97,12 @@ namespace Web_Proje.Controllers
             {
                 try
                 {
-                    _context.Update(books);
+                    _context.Update(messages);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!BooksExists(books.kitapID))
+                    if (!MessagesExists(messages.messageID))
                     {
                         return NotFound();
                     }
@@ -114,10 +113,10 @@ namespace Web_Proje.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(books);
+            return View(messages);
         }
 
-        // GET: Books/Delete/5
+        // GET: Messages/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -125,30 +124,30 @@ namespace Web_Proje.Controllers
                 return NotFound();
             }
 
-            var books = await _context.books
-                .FirstOrDefaultAsync(m => m.kitapID == id);
-            if (books == null)
+            var messages = await _context.Messages
+                .FirstOrDefaultAsync(m => m.messageID == id);
+            if (messages == null)
             {
                 return NotFound();
             }
 
-            return View(books);
+            return View(messages);
         }
 
-        // POST: Books/Delete/5
+        // POST: Messages/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var books = await _context.books.FindAsync(id);
-            _context.books.Remove(books);
+            var messages = await _context.Messages.FindAsync(id);
+            _context.Messages.Remove(messages);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BooksExists(int id)
+        private bool MessagesExists(int id)
         {
-            return _context.books.Any(e => e.kitapID == id);
+            return _context.Messages.Any(e => e.messageID == id);
         }
     }
 }

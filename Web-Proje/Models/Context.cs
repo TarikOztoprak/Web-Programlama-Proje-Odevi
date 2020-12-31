@@ -13,6 +13,6 @@ namespace Web_Proje.Models
         {
         }
         public DbSet<Books> books { get; set; }
- 
+        public DbSet<Messages> messages { get; set; }
     }
 }

@@ -22,7 +22,6 @@ namespace Web_Proje.Controllers
             _context = context;
         }
 
-
         public async Task<IActionResult> Index()
         {
             return View(await _context.books.ToListAsync());
@@ -45,6 +44,17 @@ namespace Web_Proje.Controllers
             return View(await _context.books.ToListAsync());
         }
 
+        public async Task<IActionResult> Message(int id)
+        {
+            ViewBag.id = id;
+            return View(await _context.messages.ToListAsync());
+        }
+
+        public IActionResult MessageCreate(int id)
+        {
+            ViewBag.id = id;
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
