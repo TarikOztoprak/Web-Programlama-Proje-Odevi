@@ -568,6 +568,4 @@ C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\ob
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Create.cshtml.g.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Delete.cshtml.g.cs
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Details.cshtml.g.cs
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Edit.cshtml.g.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Messages\Index.cshtml.g.cs

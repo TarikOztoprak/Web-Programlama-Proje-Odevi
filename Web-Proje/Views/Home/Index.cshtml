@@ -91,7 +91,7 @@
         foreach (var item in Model.Reverse())
         {
 
-            @if ((item.kategori == "Edebiyat") && (i < 4)){
+            @if ((item.kategori == "Eğitim") && (i < 4)){
                 <div class="col-sm-3">
                     <a asp-area="" asp-controller="Home" asp-action="Book" asp-route-id="@item.kitapID">
                         <img style="width: 100%; height:400px" src="@Html.DisplayFor(modelItem => item.link)" alt="Card image cap">

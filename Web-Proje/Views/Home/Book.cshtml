@@ -23,8 +23,9 @@
                     <p>Sayfa Sayısı: @Html.DisplayFor(modelItem => item.sayfaSayisi)</p>
                 </div>
             </div>
+            <a asp-area="" asp-controller="Messages" asp-action="Index" asp-route-id="@item.kitapID">Yorumlar</a>
          }
-         <a asp-area="" asp-controller="Messages" asp-action="Details" asp-route-id="@item.kitapID">Yorumlar</a>
+        
      }
 
 </div>
