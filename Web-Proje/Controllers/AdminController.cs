@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using Web_Proje.Models;
 
 namespace Web_Proje.Controllers
@@ -14,21 +15,45 @@ namespace Web_Proje.Controllers
     public class AdminController : Controller
     {
         private readonly Context _context;
+        private readonly IStringLocalizer<AdminController> _localizer;
 
-        public AdminController(Context context)
+        public AdminController(Context context, IStringLocalizer<AdminController> localizer)
         {
             _context = context;
+            _localizer = localizer;
         }
 
         // GET: Admin
         public async Task<IActionResult> Index()
         {
+            ViewData["yeniKitapOlustur"] = _localizer["Yeni Kitap Oluştur"];
+            ViewData["kitapBasligi"] = _localizer["Kitap Başlığı"];
+            ViewData["ilkBasimTarihi"] = _localizer["İlk Basım Tarihi"];
+            ViewData["yazar"] = _localizer["Yazar"];
+            ViewData["sayfaSayisi"] = _localizer["Sayfa Sayısı"];
+            ViewData["konu"] = _localizer["Konu"];
+            ViewData["resimLinki"] = _localizer["Resim linki"];
+            ViewData["kategori"] = _localizer["Kategori"];
+            ViewData["duzenle"] = _localizer["Düzenle"];
+            ViewData["sil"] = _localizer["Sil"];
+            ViewData["detaylar"] = _localizer["Detaylar"];
             return View(await _context.books.ToListAsync());
         }
 
         // GET: Admin/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            ViewData["kitaplar"] = _localizer["Kitaplar"];
+            ViewData["kitapBasligi"] = _localizer["Kitap Başlığı"];
+            ViewData["ilkBasimTarihi"] = _localizer["İlk Basım Tarihi"];
+            ViewData["yazar"] = _localizer["Yazar"];
+            ViewData["sayfaSayisi"] = _localizer["Sayfa Sayısı"];
+            ViewData["konu"] = _localizer["Konu"];
+            ViewData["resimLinki"] = _localizer["Resim linki"];
+            ViewData["kategori"] = _localizer["Kategori"];
+            ViewData["duzenle"] = _localizer["Düzenle"];
+            ViewData["detaylar"] = _localizer["Detaylar"];
+            ViewData["listeyeDon"] = _localizer["Listeye Dön"];
             if (id == null)
             {
                 return NotFound();
@@ -47,6 +72,17 @@ namespace Web_Proje.Controllers
         // GET: Admin/Create
         public IActionResult Create()
         {
+           
+            ViewData["kitapBasligi"] = _localizer["Kitap Başlığı"];
+            ViewData["ilkBasimTarihi"] = _localizer["İlk Basım Tarihi"];
+            ViewData["yazar"] = _localizer["Yazar"];
+            ViewData["sayfaSayisi"] = _localizer["Sayfa Sayısı"];
+            ViewData["konu"] = _localizer["Konu"];
+            ViewData["resimLinki"] = _localizer["Resim linki"];
+            ViewData["kategori"] = _localizer["Kategori"];
+            ViewData["listeyeDon"] = _localizer["Listeye Dön"];
+            ViewData["olustur"] = _localizer["Oluştur"];
+            ViewData["kitaplar"] = _localizer["Kitaplar"];
             return View();
         }
 
@@ -69,6 +105,15 @@ namespace Web_Proje.Controllers
         // GET: Admin/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            ViewData["kitapBasligi"] = _localizer["Kitap Başlığı"];
+            ViewData["ilkBasimTarihi"] = _localizer["İlk Basım Tarihi"];
+            ViewData["yazar"] = _localizer["Yazar"];
+            ViewData["sayfaSayisi"] = _localizer["Sayfa Sayısı"];
+            ViewData["konu"] = _localizer["Konu"];
+            ViewData["resimLinki"] = _localizer["Resim linki"];
+            ViewData["kategori"] = _localizer["Kategori"];
+            ViewData["duzenle"] = _localizer["Düzenle"];
+
             if (id == null)
             {
                 return NotFound();
@@ -120,6 +165,17 @@ namespace Web_Proje.Controllers
         // GET: Admin/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewData["sil"] = _localizer["Sil"];
+            ViewData["kitapBasligi"] = _localizer["Kitap Başlığı"];
+            ViewData["ilkBasimTarihi"] = _localizer["İlk Basım Tarihi"];
+            ViewData["yazar"] = _localizer["Yazar"];
+            ViewData["sayfaSayisi"] = _localizer["Sayfa Sayısı"];
+            ViewData["konu"] = _localizer["Konu"];
+            ViewData["resimLinki"] = _localizer["Resim linki"];
+            ViewData["kategori"] = _localizer["Kategori"];
+            ViewData["kitaplar"] = _localizer["Kitaplar"];
+            ViewData["listeyeDon"] = _localizer["Listeye Dön"];
+            ViewData["uyari"] = _localizer["Silmek istedeğinden emin misin?"];
             if (id == null)
             {
                 return NotFound();

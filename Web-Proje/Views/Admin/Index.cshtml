@@ -4,34 +4,34 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Admin</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">@ViewData["yeniKitapOlustur"]</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.kitapAdi)
+                @ViewData["kitapBasligi"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.basimYili)
+                @ViewData["ilkBasimTarihi"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.yazar)
+                @ViewData["yazar"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.sayfaSayisi)
+                @ViewData["sayfaSayisi"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.konu)
+                @ViewData["konu"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.link)
+                @ViewData["resimLinki"]
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.kategori)
+                @ViewData["kategori"]
             </th>
             <th></th>
         </tr>
@@ -61,9 +61,9 @@
                 @Html.DisplayFor(modelItem => item.kategori)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.kitapID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.kitapID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.kitapID">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.kitapID">@ViewData["duzenle"]</a> |
+                <a asp-action="Details" asp-route-id="@item.kitapID">@ViewData["detaylar"]</a> |
+                <a asp-action="Delete" asp-route-id="@item.kitapID">@ViewData["sil"]</a>
             </td>
         </tr>
 }

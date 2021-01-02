@@ -1,4 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@{ var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+                var cultureItems = LocOptions.Value.SupportedUICultures
+                    .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+                    .ToList(); 
+ }
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -34,15 +45,21 @@
                                 <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Books">Tüm Kitaplar</a>
                             </div>
                         </li>
+                        <li class="nav-item">
+                            <div class="nav-link">                          
+                            <select onchange="SetCulture(this.value)" asp-for="@requestCulture.RequestCulture.UICulture.Name" asp-items="cultureItems">
+                            </select>
+                            </div>
+                        </li>
                         @if (User.Identity.IsAuthenticated)
-                        {
+                         {
                             if (User.IsInRole("admin"))
                             {
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                            </li>
                             }
-                        }
+                         }
 
                     </ul>
                 </div>

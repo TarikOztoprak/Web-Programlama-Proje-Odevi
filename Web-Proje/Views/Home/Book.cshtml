@@ -19,11 +19,11 @@
 
                 <div class="col-sm-6">
                     <p style="text-align:justify">@Html.DisplayFor(modelItem => item.konu)</p>
-                    <p>İlk Basım Tarihi: @Html.DisplayFor(modelItem => item.basimYili)</p>
-                    <p>Sayfa Sayısı: @Html.DisplayFor(modelItem => item.sayfaSayisi)</p>
+                    <p>@ViewData["ilkBasımTarihi"]: @Html.DisplayFor(modelItem => item.basimYili)</p>
+                    <p>@ViewData["sayfaSayısı"]: @Html.DisplayFor(modelItem => item.sayfaSayisi)</p>
                 </div>
             </div>
-            <a asp-area="" asp-controller="Messages" asp-action="Index" asp-route-id="@item.kitapID">Yorumlar</a>
+            <a style="font-size:36pt" asp-area="" asp-controller="Messages" asp-action="Index" asp-route-id="@item.kitapID">@ViewData["yorumlar"]</a>
          }
         
      }

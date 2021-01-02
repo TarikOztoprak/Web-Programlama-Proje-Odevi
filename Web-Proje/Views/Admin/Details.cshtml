@@ -4,50 +4,50 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>@ViewData["detaylar"]</h1>
 
 <div>
-    <h4>Books</h4>
+    <h4>@ViewData["kitaplar"]</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.kitapAdi)
+        <dt class="col-sm-2">
+            @ViewData["kitapBasligi"]
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.kitapAdi)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.basimYili)
+        <dt class="col-sm-2">
+            @ViewData["ilkBasimYili"]
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.basimYili)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.yazar)
+        <dt class="col-sm-2">
+            @ViewData["yazar"]
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.yazar)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.sayfaSayisi)
+        <dt class="col-sm-2">
+            @ViewData["sayfaSayisi"]
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.sayfaSayisi)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.konu)
+        <dt class="col-sm-2">
+            @ViewData["konu"]
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.konu)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.link)
+        <dt class="col-sm-2">
+            @ViewData["resimLinki"]
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.link)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.kategori)
+        <dt class="col-sm-2">
+            @ViewData["kategori"]
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.kategori)
@@ -55,6 +55,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.kitapID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.kitapID">@ViewData["duzenle"]</a> |
+    <a asp-action="Index">@ViewData["listeyeDon"]</a>
 </div>

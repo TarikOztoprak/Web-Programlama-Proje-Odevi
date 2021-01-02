@@ -13,6 +13,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Web_Proje.Models;
+using Microsoft.AspNetCore.Mvc.Razor;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
 
 namespace Web_Proje
 {
@@ -51,6 +55,21 @@ namespace Web_Proje
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat
+                 .Suffix).AddDataAnnotationsLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                        new CultureInfo("en"),
+                        new CultureInfo("tr"),
+        
+
+        };
+                options.DefaultRequestCulture = new RequestCulture(culture: "tr", uiCulture: "tr");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
 
         }
 
@@ -73,9 +92,14 @@ namespace Web_Proje
            
             app.UseRouting();
 
+
+            var locOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(locOptions.Value);
+
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
+
 
             app.UseEndpoints(endpoints =>
             {
