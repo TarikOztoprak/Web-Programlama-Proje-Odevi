@@ -2,19 +2,24 @@
 @using Microsoft.AspNetCore.Identity
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = @ViewData["olustur"];
 }
 
-<h1>Create</h1>
+<h1>@ViewData["olustur"]</h1>
 
-<h4>Messages</h4>
+<h4>@ViewData["yorumlar"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" >
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="message" class="control-label"></label>
+                <label asp-for="User" class="control-label">@ViewData["kullanici"]</label>
+                <input readonly value="@User.Identity.Name" asp-for="User" class="form-control" />
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="message" class="control-label">@ViewData["yorum"]</label>
                 <input asp-for="message" class="form-control" />
                 <span asp-validation-for="message" class="text-danger"></span>
             </div>
@@ -24,19 +29,14 @@
                 <span asp-validation-for="BookId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="User" class="control-label"></label>
-                <input readonly value="@User.Identity.Name" asp-for="User" class="form-control" />
-                <span asp-validation-for="User" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@ViewData["olustur"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index" asp-route-id="@ViewBag.id">Back to List</a>
+    <a asp-action="Index" asp-route-id="@ViewBag.id">@ViewData["yorumlaraDon"]</a>
 </div>
 
 @section Scripts {

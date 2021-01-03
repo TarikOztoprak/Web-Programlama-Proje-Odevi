@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using Web_Proje.Data;
 using Web_Proje.Models;
 
@@ -14,15 +15,21 @@ namespace Web_Proje.Controllers
     public class MessagesController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IStringLocalizer<MessagesController> _localizer;
 
-        public MessagesController(ApplicationDbContext context)
+        public MessagesController(ApplicationDbContext context, IStringLocalizer<MessagesController> localizer)
         {
             _context = context;
+            _localizer = localizer;
         }
 
         // GET: Messages
         public async Task<IActionResult> Index(int id)
         {
+            ViewData["uyari"] = _localizer["Yorum Yapmak İçin Giriş Yapınız!"];
+            ViewData["sil"] = _localizer["Sil"];
+            ViewData["yorumlar"] = _localizer["Yorumlar"];
+            ViewData["yorumYaz"] = _localizer["Yorum Yaz"];
             ViewBag.id = id;
             return View(await _context.Messages.ToListAsync());
                     
@@ -32,6 +39,12 @@ namespace Web_Proje.Controllers
         [Authorize()]
         public IActionResult Create(int id)
         {
+            ViewData["kullanici"] = _localizer["Kullanıcı"];
+            ViewData["yorumlar"] = _localizer["Yorumlar"];
+            ViewData["yorumYaz"] = _localizer["Yorum Yaz"];
+            ViewData["yorum"] = _localizer["Yorum"];
+            ViewData["yorumlaraDon"] = _localizer["Yorumlara Dön"];
+            ViewData["olustur"] = _localizer["Oluştur"];
             ViewBag.id = id;
             return View();
         }
@@ -58,6 +71,14 @@ namespace Web_Proje.Controllers
         [Authorize(Roles="admin")]
         public async Task<IActionResult> Delete(int? id)
         {
+            ViewData["yorumlar"] = _localizer["Yorumlar"];
+            ViewData["yorumYaz"] = _localizer["Yorum Yaz"];
+            ViewData["yorum"] = _localizer["Yorum"];
+            ViewData["yorumlaraDon"] = _localizer["Yorumlara Dön"];
+            ViewData["olustur"] = _localizer["Oluştur"];
+            ViewData["silUyari"] = _localizer["Silmek istediğinden emin misin?"];
+            ViewData["sil"] = _localizer["Sil"];
+            ViewData["kullanici"] = _localizer["Kullanıcı"];
             if (id == null)
             {
                 return NotFound();

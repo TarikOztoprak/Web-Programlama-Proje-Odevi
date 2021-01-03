@@ -834,7 +834,12 @@ C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\bi
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.csproj.CoreCompileInputs.cache
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web-Proje.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Localization.dll
-C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web_Proje.Controllers.HomeController.en.resources
 C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web_Proje.Controllers.AdminController.en.resources
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Web_Proje.Controllers.MessagesController.en.resources
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Child.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Education.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Views\Home\Literature.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\tarik\OneDrive\Masaüstü\Web-Programlama-Proje-Odevi-main\Web-Proje\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll

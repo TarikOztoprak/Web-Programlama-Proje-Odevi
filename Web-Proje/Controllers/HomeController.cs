@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
@@ -36,6 +38,18 @@ namespace Web_Proje.Controllers
             return View(await _context.books.ToListAsync());
         }
 
+        [HttpPost]
+        public IActionResult Index(string culture)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.Now.AddDays(10) }
+            );
+
+            return RedirectToAction("Index");
+        }
+
         public IActionResult Privacy()
         {
             return View();
@@ -44,6 +58,21 @@ namespace Web_Proje.Controllers
         public async Task<IActionResult> Books()
         {
             ViewData["tümKitaplar"] = _localizer["Tüm Kitaplar"];
+            return View(await _context.books.ToListAsync());
+        }
+        public async Task<IActionResult> Literature()
+        {
+            ViewData["edebiyat"] = _localizer["Edebiyat Kitapları"];
+            return View(await _context.books.ToListAsync());
+        }
+        public async Task<IActionResult> Child()
+        {
+            ViewData["cocuk"] = _localizer["Çocuk ve Gençlik Kitapları"];
+            return View(await _context.books.ToListAsync());
+        }
+        public async Task<IActionResult> Education()
+        {
+            ViewData["egitim"] = _localizer["Eğitim Kitapları"];
             return View(await _context.books.ToListAsync());
         }
 

@@ -1,12 +1,6 @@
 ﻿@model IEnumerable<Web_Proje.Models.Books>
 @{ ViewData["Title"] = "Home Page"; }
 
-
-@ViewData["deneme"]
-@ViewData["trying"]
-
-
-
 <div class="position-relative">
     <img class="book-picture" src="~/pictures/books.jpg" />
     <div class="beyaz centered">@ViewData["kitaplarınDünyası"]</div>
@@ -17,6 +11,7 @@
 <hr />
 <div class="container-fluid bg-3 text-center">
     <h3>@ViewData["sonEklenenKitaplar"]</h3><br>
+    
     <div class="row">
         @foreach (var item in Model.Reverse().Take(4))
         {
@@ -56,6 +51,8 @@
                 } } }
     </div>
 </div>
+<br />
+<a class="link-tg" asp-area="" asp-controller="Home" asp-action="Literature">@ViewData["tümünüGörüntüle"]</a>
 <br>
 <br />
 <hr />
@@ -76,9 +73,14 @@
                             </div>
                         </a>
                     </div>j++;
-                } } }
+                }
+            }
+
+        }
     </div>
 </div>
+<br />
+<a class="link-tg" asp-area="" asp-controller="Home" asp-action="Child">@ViewData["tümünüGörüntüle"]</a>
 <br>
 <br />
 <hr />
@@ -99,9 +101,13 @@
                             </div>
                         </a>
                     </div>z++;
-                } } }
+                }
+            }
+        }
     </div>
 </div>
+<br />
+<a class="link-tg" asp-area="" asp-controller="Home" asp-action="Education">@ViewData["tümünüGörüntüle"]</a>
 <br>
 <br />
 <hr />

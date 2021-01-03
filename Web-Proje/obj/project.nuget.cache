@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YS2njD8+p51sRdt16qyAEJfEZzshVByDg4R/rJp8aZMJTOCf1uVLW2tLpzs8S9gMKjRnP7jht4mE0euAsVb2MQ==",
+  "dgSpecHash": "0xPa3jhvsZFHL/QPj2ovGqEltOmEL9OCv+X5wOGkUtWhAiRwsN7IWmVbucq20t0gpWZ6rcVeeZuLFc0sTbhqGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\tarik\\OneDrive\\Masaüstü\\Web-Programlama-Proje-Odevi-main\\Web-Proje\\Web-Proje.csproj",
   "expectedPackageFiles": [
@@ -48,8 +48,6 @@
     "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\3.1.10\\microsoft.extensions.fileproviders.embedded.3.1.10.nupkg.sha512",
     "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.identity.core\\3.1.10\\microsoft.extensions.identity.core.3.1.10.nupkg.sha512",
     "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.identity.stores\\3.1.10\\microsoft.extensions.identity.stores.3.1.10.nupkg.sha512",
-    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.localization\\3.1.10\\microsoft.extensions.localization.3.1.10.nupkg.sha512",
-    "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\3.1.10\\microsoft.extensions.localization.abstractions.3.1.10.nupkg.sha512",
     "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.logging\\3.1.10\\microsoft.extensions.logging.3.1.10.nupkg.sha512",
     "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.10\\microsoft.extensions.logging.abstractions.3.1.10.nupkg.sha512",
     "C:\\Users\\tarik\\.nuget\\packages\\microsoft.extensions.options\\3.1.10\\microsoft.extensions.options.3.1.10.nupkg.sha512",

@@ -31,7 +31,6 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.10",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.10",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.10",
-          "Microsoft.Extensions.Localization": "3.1.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -125,6 +124,8 @@
           "Microsoft.Extensions.Hosting.Abstractions": "3.1.0.0",
           "Microsoft.Extensions.Hosting": "3.1.0.0",
           "Microsoft.Extensions.Http": "3.1.0.0",
+          "Microsoft.Extensions.Localization.Abstractions": "3.1.0.0",
+          "Microsoft.Extensions.Localization": "3.1.0.0",
           "Microsoft.Extensions.Logging.Configuration": "3.1.0.0",
           "Microsoft.Extensions.Logging.Console": "3.1.0.0",
           "Microsoft.Extensions.Logging.Debug": "3.1.0.0",
@@ -300,12 +301,6 @@
         "resources": {
           "en/Web-Proje.resources.dll": {
             "locale": "en"
-          },
-          "fr/Web-Proje.resources.dll": {
-            "locale": "fr"
-          },
-          "tr/Web-Proje.resources.dll": {
-            "locale": "tr"
           }
         },
         "compile": {
@@ -1054,34 +1049,6 @@
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Localization/3.1.10": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.10",
-          "Microsoft.Extensions.Localization.Abstractions": "3.1.10",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.10",
-          "Microsoft.Extensions.Options": "3.1.10"
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.Localization.dll": {
-            "assemblyVersion": "3.1.10.0",
-            "fileVersion": "3.100.1020.51904"
-          }
-        },
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.Localization.dll": {}
-        }
-      },
-      "Microsoft.Extensions.Localization.Abstractions/3.1.10": {
-        "runtime": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.Localization.Abstractions.dll": {
-            "assemblyVersion": "3.1.10.0",
-            "fileVersion": "3.100.1020.51904"
-          }
-        },
-        "compile": {
-          "lib/netcoreapp3.1/Microsoft.Extensions.Localization.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Logging/3.1.10": {
@@ -3143,6 +3110,18 @@
         },
         "compileOnly": true
       },
+      "Microsoft.Extensions.Localization.Abstractions/3.1.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Localization.Abstractions.dll": {}
+        },
+        "compileOnly": true
+      },
+      "Microsoft.Extensions.Localization/3.1.0.0": {
+        "compile": {
+          "Microsoft.Extensions.Localization.dll": {}
+        },
+        "compileOnly": true
+      },
       "Microsoft.Extensions.Logging.Configuration/3.1.0.0": {
         "compile": {
           "Microsoft.Extensions.Logging.Configuration.dll": {}
@@ -4466,20 +4445,6 @@
       "sha512": "sha512-USjhGGw7PivOcVVqNGPd2lg1S1J2jvrRePlgxNcPt4gSbTtGuaRBdd78dvpHoR1GQnJ93YqoyGH3X3FsHeDL/w==",
       "path": "microsoft.extensions.identity.stores/3.1.10",
       "hashPath": "microsoft.extensions.identity.stores.3.1.10.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Localization/3.1.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sP1W4F8XWTSgyz5wNGmTd3kmpxyNp4129YPtHUawY+uZwf1vaRk5lxTyOxu+USkjC1VqAP+dBys36vmSoF6Hzw==",
-      "path": "microsoft.extensions.localization/3.1.10",
-      "hashPath": "microsoft.extensions.localization.3.1.10.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Localization.Abstractions/3.1.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-S1o0FqM0pMkimErNMXYjsMys9VS1a93N3T+qH767wNI8O40sSvRSOI0tpNYPkiKDltALJXf5DV3Ojz+37tWb3Q==",
-      "path": "microsoft.extensions.localization.abstractions/3.1.10",
-      "hashPath": "microsoft.extensions.localization.abstractions.3.1.10.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/3.1.10": {
       "type": "package",
@@ -5889,6 +5854,16 @@
       "sha512": ""
     },
     "Microsoft.Extensions.Http/3.1.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Localization.Abstractions/3.1.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Localization/3.1.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

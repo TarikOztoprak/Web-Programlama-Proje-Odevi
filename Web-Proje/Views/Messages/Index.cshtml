@@ -1,50 +1,46 @@
 ﻿@model IEnumerable<Web_Proje.Models.Messages>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = @ViewData["yorumlar"];
 }
 
 
-<h1>Yorumlar</h1>
+<h1>@ViewData["yorumlar"]</h1>
 @{ if (User.Identity.IsAuthenticated)
    {
         <p>
-            <a asp-area="" asp-controller="Messages" asp-action="Create" asp-route-id="@ViewBag.id">Create New</a>
+            <a asp-area="" asp-controller="Messages" asp-action="Create" asp-route-id="@ViewBag.id">@ViewData["yorumYaz"]</a>
         </p>
    }
    else 
    {
-	    <p>
-            Yorum Yapmak İçin Giriş Yapınız!
+	    <p class="text-warning">
+            @ViewData["uyari"]
         </p>
    }
 }
-    <table class="table">
-        @foreach (var item in Model.Reverse())
+  
+@foreach (var item in Model.Reverse())
+ {
+    @if (item.BookId == ViewBag.id)
+     {
+        <p class="font-weight-bold">
+            @Html.DisplayFor(modelItem => item.User)
+        </p>
+                
+        <p>
+            @Html.DisplayFor(modelItem => item.message)
+        </p>
+
+        @if (User.Identity.IsAuthenticated)
         {
-            @if (item.BookId == ViewBag.id)
+            if (User.IsInRole("admin"))
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.User)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.message)
-                    </td>
-
-                    <td>
-                        @if (User.Identity.IsAuthenticated)
-                        {
-                            if (User.IsInRole("admin"))
-                            {
-                                   <a asp-action="Delete" asp-route-id="@item.messageID">Delete</a>                
-                            }
-                         }
-
-                    </td>
-                </tr>
-             }
+                <a asp-action="Delete" asp-route-id="@item.messageID">@ViewData["sil"]</a>                
+            }
          }
-    </table>
+        <hr />
+        <hr />
+     }
+ }
+
