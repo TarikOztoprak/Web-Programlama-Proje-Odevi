@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -38,6 +40,18 @@ namespace Web_Proje.Controllers
             ViewData["sil"] = _localizer["Sil"];
             ViewData["detaylar"] = _localizer["Detaylar"];
             return View(await _context.books.ToListAsync());
+        }
+
+        [HttpPost]
+        public IActionResult Index(string culture)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.Now.AddDays(10) }
+            );
+
+            return RedirectToAction("Index");
         }
 
         // GET: Admin/Details/5
